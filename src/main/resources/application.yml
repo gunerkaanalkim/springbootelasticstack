@@ -24,3 +24,4 @@ elasticsearch:
 
 logging:
   file: /Users/kaanalkim/Documents/Development/logs/app.log
+
