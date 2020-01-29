@@ -7,6 +7,8 @@
 * Docker Engine: 19.03.5
 * Docker Compose: 1.24.1
 
+![ELK](https://hackernoon.com/hn-images/1*Tvmj3XsqH4hJLvXnfm6sZQ.png)
+
 ### How works ?
 * First of all, if you want change database schema, username or password, look at the **.env file** in project's root directory. 
 * docker-compose reads variables from **.env file**.
