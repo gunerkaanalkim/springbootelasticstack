@@ -1,0 +1,11 @@
+
+${AnsiColor.YELLOW}    ███████╗██╗      █████╗ ███████╗████████╗██╗ ██████╗    ███████╗████████╗ █████╗  ██████╗██╗  ██╗
+${AnsiColor.YELLOW}    ██╔════╝██║     ██╔══██╗██╔════╝╚══██╔══╝██║██╔════╝    ██╔════╝╚══██╔══╝██╔══██╗██╔════╝██║ ██╔╝
+${AnsiColor.YELLOW}    █████╗  ██║     ███████║███████╗   ██║   ██║██║         ███████╗   ██║   ███████║██║     █████╔╝
+${AnsiColor.YELLOW}    ██╔══╝  ██║     ██╔══██║╚════██║   ██║   ██║██║         ╚════██║   ██║   ██╔══██║██║     ██╔═██╗
+${AnsiColor.YELLOW}    ███████╗███████╗██║  ██║███████║   ██║   ██║╚██████╗    ███████║   ██║   ██║  ██║╚██████╗██║  ██╗
+${AnsiColor.YELLOW}    ╚══════╝╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝ ╚═════╝    ╚══════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
+
+${AnsiColor.RED}    Application Name        :   ${application.title}
+${AnsiColor.RED}    Application Version     :   ${application.version}
+${AnsiColor.RED}    Spring Boot Version     :   ${spring-boot.formatted-version}

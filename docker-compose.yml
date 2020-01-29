@@ -1,0 +1,53 @@
+version: '3'
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.5.2
+    volumes:
+      - ./containers/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:7.5.2
+    command: -f /etc/logstash/conf.d/
+    volumes:
+      - ./containers/logstash/logstash.conf:/etc/logstash/conf.d/logstash.conf
+      - /Users/kaanalkim/Documents/Development/logs/app.log:/home/app.log
+    ports:
+      - "5000:5000"
+      - "9600:9600"
+    environment:
+      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+    depends_on:
+      - elasticsearch
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.5.2
+    volumes:
+      - ./containers/kibana/kibana.yml:/usr/share/kibana/config/kibana.yml
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+
+  db:
+    container_name: mysqlserver-5.7
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - db-data:/var/lib/mysql
+
+# Volumes
+volumes:
+  db-data:
