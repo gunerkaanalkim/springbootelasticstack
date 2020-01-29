@@ -44,3 +44,6 @@ for Kibana
 ```
 http://localhost:5601
 ```
+
+### Finally
+* Logstash's config file is in the containers folder in the root directory of the project. Here, "spring_boot_log" is defined as the index. If you have not made any changes, you can see your logs from dashboard by defining this index on kibana url. 
