@@ -8,4 +8,38 @@
 * Docker Compose: 1.24.1
 
 ### How works ?
+* First of all, if you want change database schema, username or password, look at the .env file in project's root directory. docker-compose reads variables from .env file.
+* If you want see current environment variables, please run this command;
 
+```shell script
+docker-compose config
+```
+* **Replace the application's log file path in both application.yml and docker-compose.yml**
+
+* Run the command below to up all docker containers.
+```
+docker-compose up --build
+```
+
+* Run the command below to down all docker containers.
+```
+docker-compose down
+```
+
+### Verifications
+* If you have run all the above steps correctly, the following urls will get back response to you.
+
+for Logstash
+```
+http://localhost:9600
+```
+
+for Elasticsearch
+```
+http://localhost:9200
+```
+
+for Kibana
+```
+http://localhost:5601
+```
