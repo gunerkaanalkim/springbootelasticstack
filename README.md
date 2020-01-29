@@ -8,7 +8,8 @@
 * Docker Compose: 1.24.1
 
 ### How works ?
-* First of all, if you want change database schema, username or password, look at the .env file in project's root directory. docker-compose reads variables from .env file.
+* First of all, if you want change database schema, username or password, look at the **.env file** in project's root directory. 
+* docker-compose reads variables from **.env file**.
 * If you want see current environment variables, please run this command;
 
 ```shell script
