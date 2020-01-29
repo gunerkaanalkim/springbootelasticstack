@@ -54,7 +54,7 @@ services:
     ports:
       - "8080:8080"
     environment:
-      SPRING_DATASOURCE_URL:  jdbc:mysql://192.168.1.104:3306/elasticstack?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+      SPRING_DATASOURCE_URL:  jdbc:mysql://localhost:3306/elasticstack?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
       SPRING_DATASOURCE_USERNAME: elasticstack
       SPRING_DATASOURCE_PASSWORD: 123456
     restart: always
